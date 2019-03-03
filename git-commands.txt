@@ -1,19 +1,116 @@
 Configure Git
-- git --version
-- git config --global user.name "Your Name"
-- git config --global user.email "youremail@gmail.com"
+  - git --version
+  - git config --global user.name "Your Name"
+  - git config --global user.email "youremail@gmail.com"
+
+------------------------------------------------------------
+------------------------------------------------------------
 
 Repositories
-- mkdir (Make directory)
-- cd (change directory)
+  - mkdir (Make directory)
+  - cd (change directory)
 
-- git init (initialize the folder with git)
-- git status (Status if there is a git)
+  - git init (initialize the folder with git)
+  - git status (Status if there is a git)
+
+------------------------------------------------------------
+------------------------------------------------------------
 
 Commit
-- git add fileexample.txt
-or
-- git add -A (will add multiple files to commit)
+  - git add fileexample.txt
+ or
+  - git add -A (will add multiple files to commit)
+  - git add . (will add multiple files)
 
-- git commit -m "create readme.txt"
-- git diff (see the difference from last commit)
+  - git commit -m "create readme.txt"
+  - git diff (see the difference from last commit)
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Adding your Github Account to Git
+  - git config --global user.username <UserName>
+  - git config --global user.username (check to see your Git config)
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+Remotes (Online)
+
+* Connect your Local to your Remote
+  - git remote add origin <URLFROMGITHUB>
+
+  (origin is the local address of your computer
+  so anytime your push from your computer it will be
+  pushing from your origin (you computer) to a branch
+  called master).
+
+  - git remote set-url origin <URL>
+
+* By default your first branch is named 'master'
+
+*Push changes
+  - git push origin master
+
+* View Remote
+  - git remote -v
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+* Forks
+  - Fork => cloning another uses Remote (Github Repository)
+  - You fork by going onto their repository and fork it onto
+  your own account.
+
+* Clone to your local computer
+  - git clone <URLFROMGITHUB>
+
+* Connect to the Original repository
+  - git remote add upstream <URL that ends with .git>
+
+  people typically name it 'upstream'
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+*Branches
+  - git branch <BRANCHNAME> (Create a branch)
+  - git checkout <BRANCHNAME> (to checkout/ go inside branch)
+
+  - git status
+  - git add <any file changes>
+  - git commit -m "message"
+
+  - git push origin <BRANCHNAME>
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+* Pull
+  - git pull <REMOTENAME> <BRANCHNAME>
+
+  *pull any changes to a branch
+  *remote name is usually origin
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+* Pull Request
+
+Request for the original user to accept the changes you made
+  - Go the their repository and send your Branch a request
+
+------------------------------------------------------------
+------------------------------------------------------------
+
+* Merge
+  - git checkout <a branch>
+  - git merge <BRANCHNAME> (merge a branch another branch)
+
+  *Delete Branch
+  - git branch -d <BRANCHNAME> (Delete a local branch)
+  - git push <REMOTENAME> -- delete <BRANCH NAME> (Delete a branch from remote on Github)
+
+  *Pull from Upstream
+  - git pull upstream <Their Branch>
