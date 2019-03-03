@@ -1,0 +1,19 @@
+Configure Git
+- git --version
+- git config --global user.name "Your Name"
+- git config --global user.email "youremail@gmail.com"
+
+Repositories
+- mkdir (Make directory)
+- cd (change directory)
+
+- git init (initialize the folder with git)
+- git status (Status if there is a git)
+
+Commit
+- git add fileexample.txt
+or
+- git add -A (will add multiple files to commit)
+
+- git commit -m "create readme.txt"
+- git diff (see the difference from last commit)
